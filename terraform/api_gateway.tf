@@ -41,6 +41,9 @@ resource "aws_api_gateway_integration_response" "VisitorIntegrationResponse" {
   resource_id = aws_api_gateway_resource.cors_resource.id
   http_method = aws_api_gateway_method.increment_visitors_method.http_method
   status_code = aws_api_gateway_method_response.method_response_200.status_code
+  response_parameters = {
+    "method.response.header.Access-Control-Allow-Origin" = "'*'"
+  }
 
   depends_on = [
     aws_api_gateway_integration.lambda_visitor_integration
