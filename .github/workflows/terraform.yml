@@ -2,7 +2,7 @@ name: 'Terraform back-end'
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
 
 permissions:
