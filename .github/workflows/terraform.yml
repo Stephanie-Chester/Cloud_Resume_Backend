@@ -10,9 +10,8 @@ permissions:
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'Terraform - AWS_CloudResume_backend'
     runs-on: ubuntu-latest
-    environment: AWS_CloudResume_backend
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
