@@ -10,7 +10,7 @@ class TestMyLambdaFunction(unittest.TestCase):
         dynamodb_mock.Table.return_value = table_mock
 
         # call the Lambda function handler with the mock event and context
-        event = {"partition_key": "12345"}
+        event = {"partition_key": "visitorCount"}
         context = MagicMock()
         handler(event, context, dynamodb=dynamodb_mock)
 
