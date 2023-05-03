@@ -3,7 +3,7 @@ from unittest.mock import MagicMock
 from LambdaFunction import handler # replace with the name of your Lambda function's handler
 
 class TestMyLambdaFunction(unittest.TestCase):
-    def test_handler(self):
+    def lambda_handler(self):
         # create a mock DynamoDB table
         dynamodb_mock = MagicMock()
         table_mock = MagicMock()
