@@ -2,8 +2,9 @@ name: Run Python mock unit test
 
 on:
   push:
-    branches:
-      - "master"
+    branches: [ main ]
+  pull_request:
+  
 jobs:
   test:
     runs-on: ubuntu-latest
