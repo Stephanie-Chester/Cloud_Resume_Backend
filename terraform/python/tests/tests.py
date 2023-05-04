@@ -1,22 +1,19 @@
 import unittest
-import boto3
-from unittest.mock import MagicMock
-import LambdaFunction
-def test_lambda_handler():
-    # Set up a mock DynamoDB client
-    dynamodb = boto3.client('dynamodb', region_name='us-east-1')
-    test_lambda_handler.dynamodb = MagicMock(return_value=dynamodb)
+from unittest.mock import Mock
+from LambdaFunction import lambda_handler
 
-    # Call the lambda function
-    response = test_lambda_handler.lambda_handler(event=None, context=None)
-
-    # Check the response
-    assert response == {"statusCode": 200, "body": "Success"}
-
-    # Check that the DynamoDB table was accessed correctly
-    dynamodb.put_item.assert_called_once_with(
-        TableName='visitor_count',
-        Item={
-            'visitorCount': {'N': '1'}
-        }
-    )
+class TestLambda(unittest.TestCase):
+    def test_lambda_handler(self):
+        # Create a mock DynamoDB table
+        table_mock = Mock()
+        # Set up the expected behavior of the mock table
+        table_mock.get_item.return_value = {'Item': {'visitorCount': 'user', 'visitor': 5}}
+        # Call the Lambda function with the mock table
+        result = lambda_handler(event={}, context={}, visitors_table=table_mock)
+        # Check that the result is as expected
+        self.assertEqual(result, {
+            'body': 5,
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Content-Type': 'application/json'
+        })

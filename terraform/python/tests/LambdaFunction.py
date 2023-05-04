@@ -7,7 +7,7 @@ dynamodb = boto3.resource('dynamodb')
 # Get the table name
 visitors_table = dynamodb.Table('visitor_count')
 
-def lambda_handler(event, context):
+def lambda_handler(event, context, visitors_table=visitors_table):
     
     response = visitors_table.get_item(Key={"visitorCount" : "user" })    
     visitorCount = response['Item']['visitor']
