@@ -1,45 +1,22 @@
-import unittest
-from unittest.mock import Mock, patch
-import json
 import boto3
+from unittest.mock import MagicMock
+import LambdaFunction # import your lambda function code here
 
-# Import the Lambda function
-from LambdaFunction import lambda_handler
+def test_lambda_handler():
+    # Set up a mock DynamoDB client
+    dynamodb = boto3.client('dynamodb', region_name='us-east-1')
+    LambdaFunction.dynamodb = MagicMock(return_value=dynamodb)
 
-class TestLambdaFunction(unittest.TestCase):
+    # Call the lambda function
+    response = LambdaFunction.lambda_handler(event=None, context=None)
 
-    def test_lambda_handler(self):
-        # Mock the DynamoDB table
-        mock_table = Mock()
-        mock_table.get_item.return_value = {
-            'Item': {
-                'visitor': 10
-            }
+    # Check the response
+    assert response == {"statusCode": 200, "body": "Success"}
+
+    # Check that the DynamoDB table was accessed correctly
+    dynamodb.put_item.assert_called_once_with(
+        TableName='visitor_count',
+        Item={
+            'visitorCount': {'N': '1'}
         }
-        mock_table.update_item.return_value = None
-        
-        # Patch the DynamoDB resource to return the mock table
-        with patch.object(boto3, 'resource') as mock_dynamodb:
-            mock_dynamodb.return_value.Table.return_value = mock_table
-            
-            # Call the Lambda function with a test event
-            event = {}
-            context = {}
-            response = lambda_handler(event, context)
-            
-            # Check that the response is as expected
-            expected_response = {
-                'statusCode': 200,
-                'body': json.dumps({'visitorCount': 11})
-            }
-            self.assertEqual(response, expected_response)
-            
-            # Check that the DynamoDB table was called correctly
-            mock_table.get_item.assert_called_with(Key={'visitorCount': 'user'})
-            mock_table.update_item.assert_called_with(
-                Key={'visitorCount': 'user'},
-                UpdateExpression='set visitor = visitor + :n',
-                ExpressionAttributeValues={':n': 1},
-            )
-
-
+    )
