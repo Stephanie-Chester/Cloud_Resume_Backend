@@ -28,4 +28,4 @@ jobs:
       - name: Run Tests
         run: |
           cd $GITHUB_WORKSPACE/terraform/python/tests/
-          python3 -m unittest tests.py
+          python3 -m unittest -v tests.py
