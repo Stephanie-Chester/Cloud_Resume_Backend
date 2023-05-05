@@ -64,9 +64,7 @@ resource "aws_api_gateway_deployment" "visitor_api_deployment" {
       aws_api_gateway_integration.lambda_visitor_integration.id,
       aws_api_gateway_method_response.method_response_200.id
     ]))
-  }
-  lifecycle {
-    create_before_destroy = false
+
   }
 }
 resource "aws_api_gateway_stage" "api_stage" {
