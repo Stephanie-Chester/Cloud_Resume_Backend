@@ -2,6 +2,8 @@
 
 [![Terraform back-end](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/terraform.yml/badge.svg?event=push)](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/terraform.yml)
 
+[![Run Python mock unit test](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/tests.yml/badge.svg?event=push)](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/tests.yml)
+
 ## AWS Cloud Resume Project
  
 This repo is my attempt at the Cloud Resume Challenge created by Forrest Brazeal. I have done this challenge in AWS cloud. The steps to the challenge are listed in the link below on Forrest's website. After I am done with the challenge I will also link my blog here in this space.
@@ -32,9 +34,9 @@ This repo is my attempt at the Cloud Resume Challenge created by Forrest Brazeal
  ● Leveraged Python Boto3 and Lambda to automate & serve changes to/from DynamoDB using API Gateway<br>
  ● Created a GitHub repository for my back-end and front-end code.<br>
  ● Cypress test for front-end website.<br>
+ ● Unit test setup locally for Lambda code and also a Github actions unit test.<br>
  
  ### Coming soon:
- ● Python tests for Lambda code<br>
  ● Blog<br>
  ● Diagram of infrastructure<br>
  
