@@ -67,7 +67,7 @@ resource "aws_api_gateway_deployment" "visitor_api_deployment" {
     ]))
   }
   lifecycle {
-    create_before_destroy = true
+    create_before_destroy = false
   }
 }
 resource "aws_api_gateway_stage" "api_stage" {
