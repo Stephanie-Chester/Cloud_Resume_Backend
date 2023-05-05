@@ -62,7 +62,6 @@ resource "aws_api_gateway_deployment" "visitor_api_deployment" {
       aws_api_gateway_resource.cors_resource.id,
       aws_api_gateway_method.increment_visitors_method.http_method,
       aws_api_gateway_integration.lambda_visitor_integration.id,
-      aws_api_gateway_integration_response.VisitorIntegrationResponse.id,
       aws_api_gateway_method_response.method_response_200.id
     ]))
   }
