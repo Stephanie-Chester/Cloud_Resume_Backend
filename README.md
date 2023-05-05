@@ -45,7 +45,6 @@ This repo is my attempt at the Cloud Resume Challenge created by Forrest Brazeal
  
  ### Coming soon:
  ● Blog<br>
- ● Diagram of infrastructure<br>
  
  Cloud Resume Challenge Official Website
  
