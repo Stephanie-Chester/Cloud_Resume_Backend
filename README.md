@@ -4,6 +4,8 @@
 
 [![Run Python mock unit test](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/tests.yml/badge.svg?event=push)](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/tests.yml)
 
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/1f2d0ce3-2208-439e-81db-3cfc157c617d" id="8yeVXrggjeiA"></iframe></div>
+
 ## AWS Cloud Resume Project
  
 This repo is my attempt at the Cloud Resume Challenge created by Forrest Brazeal. I have done this challenge in AWS cloud. The steps to the challenge are listed in the link below on Forrest's website. After I am done with the challenge I will also link my blog here in this space.
