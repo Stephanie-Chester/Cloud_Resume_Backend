@@ -4,7 +4,7 @@
 
 [![Run Python mock unit test](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/tests.yml/badge.svg?event=push)](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/tests.yml)
 
-![AWS Cloud Resume Architecture](https://user-images.githubusercontent.com/37819313/236529788-7dadf74b-9f63-4097-a9da-ec0e0aa5e301.png)
+![AWS Cloud Resume Architecture](https://user-images.githubusercontent.com/37819313/236531950-30394115-2312-49ba-bb19-304ccd3af671.png)
 
 
 ## AWS Cloud Resume Project
