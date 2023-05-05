@@ -1,4 +1,4 @@
-# Cloud_Resume_Backend
+# Cloud Resume Backend - AWS
 
 [![Terraform back-end](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/terraform.yml/badge.svg?event=push)](https://github.com/Stephanie-Chester/Cloud_Resume_Backend/actions/workflows/terraform.yml)
 
@@ -8,6 +8,10 @@
 
 
 ## AWS Cloud Resume Project
+ 
+My website:
+https://www.stephaniechester.live
+
  
 This repo is my attempt at the Cloud Resume Challenge created by Forrest Brazeal. I have done this challenge in AWS cloud. The steps to the challenge are listed in the link below on Forrest's website. After I am done with the challenge I will also link my blog here in this space.
  
