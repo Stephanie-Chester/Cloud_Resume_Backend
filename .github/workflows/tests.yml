@@ -26,4 +26,6 @@ jobs:
           pip3 install -r ./terraform/python/requirements.txt
           echo
       - name: Run Tests
-        run: python3 -m unittest ./terraform/python/tests/tests.py
+        run: |
+          cd $GITHUB_WORKSPACE/terraform/python/tests/
+          python3 -m unittest tests.py
