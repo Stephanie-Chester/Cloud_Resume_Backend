@@ -1,4 +1,4 @@
-name: Run Python mock unit test
+name: Python mock unit test
 
 on:
   push:
